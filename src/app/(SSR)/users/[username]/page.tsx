@@ -17,7 +17,7 @@ async function getUser(username: string): Promise<UnsplashUser> {
     return await response.json();
 }
 
-export async function generateMetata({
+export async function generateMetadata({
     params: { username },
 }: PageProps): Promise<Metadata> {
     const user: UnsplashUser = await getUser(username); //deduplication: NextJS will recognize if the same api call is being made and cache the first api call.

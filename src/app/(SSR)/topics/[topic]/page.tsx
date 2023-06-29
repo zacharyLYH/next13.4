@@ -21,7 +21,7 @@ export function generateMetadata({
 export const dynamicParams = false;
 
 //run with these params at build time and cache them
-export function generateStaticParmas() {
+export function generateStaticParams() {
     return ["health", "fitness", "coding"].map((topic) => ({ topic }));
 }
 
