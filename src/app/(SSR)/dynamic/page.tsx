@@ -14,7 +14,7 @@ export default async function Dynamic() {
         "https://api.unsplash.com/photos/random?client_id=" +
             process.env.UNSPLASH_ACCESS_KEY,
         {
-            next: { revalidate: 0 },
+            next: { revalidate: 10000000000000000000000000 },
         }
     );
     const image: UnsplashImage = await response.json();
