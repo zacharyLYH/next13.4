@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Container, Nav, Navbar } from "react-bootstrap";
+import { Container, Nav, NavDropdown, Navbar } from "react-bootstrap";
 import { usePathname } from "next/navigation";
 
 export default function NavBar() {
@@ -42,6 +42,17 @@ export default function NavBar() {
                         >
                             Isr
                         </Nav.Link>
+                        <NavDropdown title="Topics" id="topics-dropdown">
+                            <NavDropdown.Item as={Link} href="/topics/health">
+                                Health
+                            </NavDropdown.Item>
+                            <NavDropdown.Item as={Link} href="/topics/fitness">
+                                Fitness
+                            </NavDropdown.Item>
+                            <NavDropdown.Item as={Link} href="/topics/coding">
+                                Coding
+                            </NavDropdown.Item>
+                        </NavDropdown>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
